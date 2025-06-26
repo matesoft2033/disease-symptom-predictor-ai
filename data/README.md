@@ -2,10 +2,10 @@
 
 This project uses four files from the Disease Symptom Description Dataset on Kaggle:
 
-- `dataset.xlsx`: Contains diseases and up to 17 symptoms associated with each.
-- `symptom_description.xlsx`: Explains each symptom in simple language.
-- `symptom_precaution.xlsx`: Lists 4 recommended precautions for each disease.
-- `symptom_severity.xlsx`: Assigns a severity score (1 to 5) to each symptom.
+- `dataset.csv`: Contains diseases and up to 17 symptoms associated with each.
+- `symptom_description.csv`: Explains each symptom in simple language.
+- `symptom_precaution.csv`: Lists 4 recommended precautions for each disease.
+- `symptom_severity.csv`: Assigns a severity score (1 to 5) to each symptom.
 
 Source: https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset
 
