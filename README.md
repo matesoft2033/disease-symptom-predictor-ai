@@ -17,42 +17,38 @@ An AI-powered web application that predicts possible diseases based on user-sele
 
 ## 📂 Project Structure
 
-- data/                      Contains the Excel files (not included in repo)  
-  - README.md                Instructions to get the dataset from Kaggle  
-
-- src/  
-  - data_preprocessing.py    Clean & prepare the dataset  
-  - model.py                 Train and save ML model  
-  - predict.py               Logic to turn symptoms → disease  
-  - chatbot.py               Gives chatbot-style advice and tips  
-
-- app/  
-  - gradio_app.py            Main Gradio UI app  
-
-- models/  
-  - rf_model.pkl             Trained model file  
-
-- notebooks/                 Jupyter notebooks for exploration  
-  - 1_data_exploration.ipynb  
-  - 2_preprocessing_test.ipynb  
-  - 3_model_testing.ipynb  
-
-- requirements.txt           Required Python packages  
-- .gitignore  
-- README.md                  You're here!
+disease-symptom-prediction/  
+├── data/                      # Excel files (download manually from Kaggle)  
+│   └── README.md              # Instructions for dataset placement  
+├── src/                       # Core logic  
+│   ├── data_preprocessing.py  # Clean & prepare the dataset  
+│   ├── model.py               # Train and save ML model  
+│   ├── predict.py             # Predict disease from symptoms  
+│   └── chatbot.py             # Generate chatbot-style advice  
+├── app/  
+│   └── gradio_app.py          # Gradio UI web app  
+├── models/  
+│   └── rf_model.pkl           # Trained Random Forest model  
+├── notebooks/                 # Jupyter notebooks for exploration  
+│   ├── 1_data_exploration.ipynb  
+│   ├── 2_preprocessing_test.ipynb  
+│   └── 3_model_testing.ipynb  
+├── requirements.txt           # Python package dependencies  
+├── .gitignore                 # Files to ignore in Git  
+└── README.md                  # Project documentation (this file)
 
 ---
 
 ## 🧠 How It Works
 
-1. User selects symptoms via checkboxes.  
-2. The model receives a binary vector of symptoms.  
-3. A trained classifier (Random Forest) predicts the most likely disease.  
-4. The app returns:  
+1. User selects symptoms via checkboxes  
+2. A binary vector is created based on selected symptoms  
+3. Random Forest classifier predicts the most likely disease  
+4. The app displays:  
    - 🦠 Disease name  
-   - 🧾 Description of related symptoms  
+   - 📖 Description of symptoms  
    - 🛡️ Suggested precautions  
-   - 🤖 Encouragement from the chatbot  
+   - 💬 Friendly chatbot advice  
 
 ---
 
@@ -61,7 +57,7 @@ An AI-powered web application that predicts possible diseases based on user-sele
 This project uses the dataset from Kaggle:  
 https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset
 
-You must download the following files manually and place them in the `data/` folder:  
+Place these files in the `data/` folder after downloading:  
 - `dataset.xlsx`  
 - `symptom_description.xlsx`  
 - `symptom_precaution.xlsx`  
@@ -71,25 +67,26 @@ You must download the following files manually and place them in the `data/` fol
 
 ## ⚙️ Installation
 
-1. Clone the repo by running the following commands in your terminal:  
-   git clone https://github.com/your-username/disease-symptom-prediction.git  
-   cd disease-symptom-prediction  
+1. Clone the repository:  
+   `git clone https://github.com/your-username/disease-symptom-prediction.git`  
+   `cd disease-symptom-prediction`
 
-2. Install the required Python packages by running:  
-   pip install -r requirements.txt  
+2. Install the required packages:  
+   `pip install -r requirements.txt`
 
-3. Run the app with this command:  
-   python app/gradio_app.py  
+3. Run the app:  
+   `python app/gradio_app.py`
 
-4. Open your browser and go to http://127.0.0.1:7860 to use the application.  
+4. Open your browser and go to:  
+   `http://127.0.0.1:7860`
 
 ---
 
 ## 🙌 Credits
 
-- Dataset provided by [Itachi9604 on Kaggle](https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset)  
-- Machine learning model and preprocessing inspired by standard sklearn workflows  
+- Dataset by [Itachi9604 on Kaggle](https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset)  
 - UI powered by [Gradio](https://gradio.app/)  
+- Machine learning model built with Scikit-learn  
 - Thanks to all open-source contributors  
 
 ---
