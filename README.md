@@ -1,101 +1,104 @@
-# 🧠 Disease Symptom Prediction App
+# 🧠 Disease Symptom Prediction AI
 
-An AI-powered web application that predicts possible diseases based on user-selected symptoms and gives friendly health advice — like a chatbot.
+![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
+![License](https://img.shields.io/github/license/your-username/disease-symptom-prediction)
+![Issues](https://img.shields.io/github/issues/your-username/disease-symptom-prediction)
 
----
-
-## 🚀 Features
-
-* ✅ Select symptoms from a list (checkbox UI)
-* ✅ Predict the most likely disease using a trained machine learning model
-* ✅ Get helpful, friendly chatbot-style messages with:
-
-  * 🛡️ Health precautions
-  * 📖 Symptom descriptions
-  * 💬 Encouragement & self-care tips
+AI-powered tool that predicts possible diseases based on symptoms using a trained machine learning model and provides chatbot-style suggestions.
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
 disease-symptom-prediction/
-├── data/                      # Excel files (download manually from Kaggle)
-│   └── README.md              # Instructions for dataset placement
-├── src/                       # Core logic
-│   ├── data_preprocessing.py  # Clean & prepare the dataset
-│   ├── model.py               # Train and save ML model
-│   ├── predict.py             # Predict disease from symptoms
-│   └── chatbot.py             # Generate chatbot-style advice
-├── app/
-│   └── gradio_app.py          # Gradio UI web app
-├── models/
-│   └── rf_model.pkl           # Trained Random Forest model
-├── notebooks/                 # Jupyter notebooks for exploration
+├── data/               # Excel dataset (not uploaded)
+│   └── README.md       # Instructions for downloading from Kaggle
+│
+├── src/                # Source code
+│   ├── data_preprocessing.py   # Cleans & prepares dataset
+│   ├── model.py                # Trains and saves the ML model
+│   ├── predict.py              # Predicts disease from symptoms
+│   └── chatbot.py              # Symptom-checker chatbot logic
+│
+├── app/                # App interface
+│   └── gradio_app.py   # Gradio-based web UI
+│
+├── models/             # Trained model files
+│   └── rf_model.pkl
+│
+├── notebooks/          # Jupyter notebooks for analysis
 │   ├── 1_data_exploration.ipynb
 │   ├── 2_preprocessing_test.ipynb
 │   └── 3_model_testing.ipynb
-├── requirements.txt           # Python package dependencies
-├── .gitignore                 # Files to ignore in Git
-└── README.md                  # Project documentation (this file)
+│
+├── requirements.txt    # Python dependencies
+├── .gitignore
+└── README.md
 ```
-
----
-
-## 🧠 How It Works
-
-1. User selects symptoms via checkboxes
-2. A binary vector is created based on selected symptoms
-3. Random Forest classifier predicts the most likely disease
-4. The app displays:
-
-   * 🦠 Disease name
-   * 📖 Description of symptoms
-   * 🛡️ Suggested precautions
-   * 💬 Friendly chatbot advice
-
----
-
-## 📊 Dataset Source
-
-This project uses the dataset from Kaggle:
-[https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset](https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset)
-
-Place all `.csv` files from the dataset in the `/data` folder.
 
 ---
 
 ## ⚙️ Installation
 
-1. **Clone the repo:**
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/disease-symptom-prediction.git
 cd disease-symptom-prediction
 ```
 
-2. **Install dependencies:**
+### 2. Create virtual environment (optional but recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Run the app:**
+---
+
+## 🚀 Run the App
 
 ```bash
-cd app
-python gradio_app.py
+python app/gradio_app.py
 ```
 
----
-
-## ✍️ Credits
-
-Created by \[Mate].
-Thanks to the open-source community for datasets and libraries.
+The app will start locally and you can open it in your browser at `http://localhost:7860`.
 
 ---
 
-## 📄 License
+## 🤖 Features
 
-This project is licensed under the MIT License. See `LICENSE` file for details.
+- ✅ Predict disease from symptoms
+- 🧠 Trained on structured healthcare dataset
+- 💬 Chatbot-style health advice
+- 🖥️ User-friendly Gradio interface
+
+---
+
+<details>
+<summary>📦 Dataset Note (Click to expand)</summary>
+
+We use a healthcare dataset available on [Kaggle](https://www.kaggle.com/). Due to licensing, it is not uploaded in this repo. Please download it manually and place it in the `data/` directory.
+
+</details>
+
+---
+
+## 🪪 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Credits
+
+Created by [Mate](https://github.com/your-username) — feel free to fork, star, or contribute.
+
+---
