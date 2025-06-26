@@ -1,8 +1,8 @@
 # 🧠 Disease Symptom Prediction AI
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![License](https://img.shields.io/github/license/matesoft2033/disease-symptom-prediction)
-![Issues](https://img.shields.io/github/issues/mateosft2033/disease-symptom-prediction)
+![License](https://img.shields.io/github/license/matesoft2033/disease-symptom-predictor-ai)
+![Issues](https://img.shields.io/github/issues/mateosft2033/disease-symptom-predictor-ai)
 
 AI-powered tool that predicts possible diseases based on symptoms using a trained machine learning model and provides chatbot-style suggestions.
 
