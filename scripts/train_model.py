@@ -14,3 +14,5 @@ model = train_model(X_train, y_train)
 evaluate_model(model, X_train, y_train, label="Train")
 evaluate_model(model, X_test, y_test, label="Test")
 
+
+joblib.dump(model, 'models/rf_model.pkl') 
