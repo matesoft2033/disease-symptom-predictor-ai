@@ -1,6 +1,7 @@
 from src.data_preprocessing import load_and_clean_data, get_all_symptoms, vectorize_symptoms
 from src.model import train_model, evaluate_model
 from sklearn.model_selection import train_test_split
+import joblib 
 
 df = load_and_clean_data("data/dataset.csv")
 all_symptoms, symptom_cols = get_all_symptoms(df)
@@ -11,8 +12,8 @@ y = df_vectorized["disease"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratify=y)
 
 model = train_model(X_train, y_train)
+joblib.dump(model, 'models/rf_model.pkl')  # <-- Save the trained model here
+print("Model saved to 'models/rf_model.pkl'")
+
 evaluate_model(model, X_train, y_train, label="Train")
 evaluate_model(model, X_test, y_test, label="Test")
-
-
-joblib.dump(model, 'models/rf_model.pkl') 
